@@ -71,7 +71,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
 			minutesTillTrain = trnFreq - timeRemaining;
     		
     		// Next Train
-			nextTrain = moment().add(tMinutesTillTrain, "minutes");
+			nextTrain = moment().add(minutesTillTrain, "minutes");
 			nextTrainFormat = moment(nextTrain).format('hh:mm');
 
     // Add each train's data into the table
